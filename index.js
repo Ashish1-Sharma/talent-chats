@@ -24,7 +24,7 @@ io.on("connection", (socket) => {
     try {
         console.log("a user connected");
 
-        socket.on("joinGroup", ({ gId }) => {
+        socket.on("joinGroup", (gId) => {
             socket.join(gId);
             console.log(`User joined group ${gId}`);
         });
