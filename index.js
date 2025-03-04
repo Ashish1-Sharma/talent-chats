@@ -37,7 +37,7 @@ io.on("connection", (socket) => {
         
 
             // Send the message only to users in the same group (excluding the sender)
-            socket.to(data.gId).emit(data.gId, data);
+            socket.emit(data.gId, data);
 
         });
 
